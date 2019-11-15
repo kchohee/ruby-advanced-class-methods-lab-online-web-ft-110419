@@ -39,6 +39,21 @@ def self.alphabetical
   @@all.sort_by {|s| s.name}
 end
 
+def self.new_from_filename(filename)
+  s = self.new
+  fileinfo = filename.split("-")
+  artist = fileinfo[0]
+  trackar = fileinfo[1].split('.')
+  track = trackar[0]
+  s.name = track
+  s.artist_name = artist
+  return s
+end
+
+
+
+
+
       def self.all
           @@all
       end
