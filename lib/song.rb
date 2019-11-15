@@ -30,8 +30,10 @@ def self.find_or_create_by_name(name)
   if f.nil?
   c = self.create_by_name(name)
    return c
+ else
+   return f
  end
-
+end
 
 
       def self.all
