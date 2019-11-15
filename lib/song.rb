@@ -50,7 +50,16 @@ def self.new_from_filename(filename)
   return s
 end
 
-
+def self.create_from_filename(filename)
+  s = self.new
+  fileinfo = filename.split(" - ")
+  artist = fileinfo[0]
+  trackar = fileinfo[1].split('.')
+  track = trackar[0]
+  s.name = track
+  s.artist_name = artist
+  @@all << s
+end
 
 
 
