@@ -3,10 +3,16 @@ class Song
   @@all = []
 
   def self.create
-    song = self.new
-    @@all << song
-  return song
+    s = self.new
+    @@all << s
+  return s
   end
+
+def self.new_by_name(name)
+  s = self.new
+  s.name = name
+  return s
+end
 
       def self.all
           @@all
